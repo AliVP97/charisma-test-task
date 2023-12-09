@@ -2,7 +2,14 @@ import { useState } from "react";
 import type { AppProps } from "next/app";
 import { Hydrate, QueryClient, QueryClientProvider } from "react-query";
 import { ReactQueryDevtools } from "react-query/devtools";
+
+import { config } from "@fortawesome/fontawesome-svg-core";
+import "@fortawesome/fontawesome-svg-core/styles.css";
+
+import "swiper/swiper-bundle.css";
 import "@/styles/globals.css";
+
+config.autoAddCss = false;
 
 export default function App({ Component, pageProps }: AppProps) {
   const [queryClient] = useState(
